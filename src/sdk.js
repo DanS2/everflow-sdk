@@ -17,7 +17,7 @@ export default class EverflowSDK {
         }
 
         this.customParamProvider = customParamProvider;
-        this._trackingDomain = '<<.TrackingDomain>>';
+        this._trackingDomain = 'https://www.ccpmtrk.com';
     }
 
     configure(options) {
@@ -178,6 +178,9 @@ export default class EverflowSDK {
                     .catch(err => {
                         reject(err);
                     })
+            })
+            .catch(err => {
+                reject(err);
             });
         });
     }
